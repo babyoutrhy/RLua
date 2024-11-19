@@ -1,6 +1,6 @@
 getgenv().Place = {
-    [13864661000] = "https://raw.githubusercontent.com/rhywme/babyoutrhy/refs/heads/main/Break%20In%202/Lobby",
-    [13864667823] = "https://raw.githubusercontent.com/rhywme/babyoutrhy/refs/heads/main/Break%20In%202/Ingame",
+    [13864661000] = "https://raw.githubusercontent.com/rhywme/babyoutrhy/main/Break%20In%202/Lobby",
+    [13864667823] = "https://raw.githubusercontent.com/rhywme/babyoutrhy/main/Break%20In%202/Ingame",
 }
 for PlaceID, Execute in pairs(Place) do
     if PlaceID == game.PlaceId then
