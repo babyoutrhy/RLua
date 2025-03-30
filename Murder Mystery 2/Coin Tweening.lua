@@ -63,7 +63,7 @@ workspace.DescendantRemoving:Connect(removeCoinPart)
 local currentCoin = findNearestCoinServer(nil)
 
 if currentCoin then
-    humanoidRootPart.CFrame = currentCoin.CFrame * CFrame.new(0, 2, 0) -- 2 studs above
+    humanoidRootPart.CFrame = currentCoin.CFrame * CFrame.new(0, 1, 0) -- 1 stud above
     table.insert(visitedCoins, currentCoin)
 end
 
