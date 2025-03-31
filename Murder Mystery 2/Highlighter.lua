@@ -1,4 +1,3 @@
-
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local LocalPlayer = Players.LocalPlayer
@@ -108,4 +107,4 @@ Players.PlayerRemoving:Connect(onPlayerRemoving)
 RunService.RenderStepped:Connect(applyHighlights)
 
 
-_G.ToggleName = {} -- Optional.
+_G.ToggleName = true -- Optional (put if you want it to turn off)
