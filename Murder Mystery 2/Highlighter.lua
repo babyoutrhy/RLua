@@ -108,4 +108,4 @@ Players.PlayerRemoving:Connect(onPlayerRemoving)
 RunService.RenderStepped:Connect(applyHighlights)
 
 
-_G.ToggleName = true -- Set it to false if you want the highlighter turned off.
+_G.ToggleName = {} -- Optional.
