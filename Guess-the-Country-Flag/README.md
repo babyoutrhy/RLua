@@ -28,7 +28,7 @@ The script uses [this flag database](https://raw.githubusercontent.com/babyoutrh
 ## What NOT To Do
 
 ⚠️ **Avoid These Actions While Script is Running**:
-- Manually typing in the answer box (will not continue/type letters all together))
+- Manually typing in the answer box (will not continue/will type scribbled letters)
 - Clicking away from the answer box (will stop typing)
 - Pressing Escape during typing (will stop typing)
 - Switching windows/tabs during gameplay (not sure about this, but recommended avoiding)
