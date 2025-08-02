@@ -50,7 +50,7 @@ local function autoAnswer()
 
     local currentImage = flagImage.Image
     local imageId = currentImage:match("rbxassetid://(%d+)") or currentImage
-    local country = countryMap[imageId] or countryMap["rbxassetid://"..imageId]
+    local country = countryFlag[imageId] or countryFlag["rbxassetid://"..imageId]
     
     if country and inputBox:IsDescendantOf(game) then
         inputBox:CaptureFocus()
