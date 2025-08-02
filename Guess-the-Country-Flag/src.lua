@@ -56,7 +56,7 @@ local function autoAnswer()
     local country = countryFlag[imageId] or countryFlag["rbxassetid://"..imageId]
     
     if country and inputBox:IsDescendantOf(game) then
-        inputBox:Activate()  -- Focus the text box
+        inputBox:CaptureFocus()  -- CaptureFocus should work, I hope so..
         
         if instantSubmit then
             -- Instant submission mode
