@@ -1,4 +1,4 @@
-local countryMap = {
+return {
     ["rbxassetid://120823458135516"] = "Brazil",
     ["rbxassetid://107654293275947"] = "Canada",
     ["rbxassetid://117833677055587"] = "China",
