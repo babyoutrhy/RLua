@@ -3,8 +3,8 @@
 ## Features
 
 - 🚀 **Two response modes**:
-    - Instant submission (competitive play)
-    - Realistic typing simulation (avoids getting suspicious by players)
+   - Instant submission (competitive play)
+   - Realistic typing simulation (avoids getting suspicious by players)
 - ⚙️ **Automatic game detection** - only activates during rounds
 - 🔁 **Self-recovering** - restarts automatically after each game
 - 📡 **Remote updating** - flag database updates without script changes
