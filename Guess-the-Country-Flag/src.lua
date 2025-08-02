@@ -86,7 +86,7 @@ local function autoAnswer()
             local submitDelay = math.random(0.3, 1.2)
             task.wait(submitDelay)
             game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.Return, false, game)
-            wait(0.01)
+            task.wait(0.01)
             game:GetService("VirtualInputManager"):SendKeyEvent(false, Enum.KeyCode.Return, false, game)
         end
     end
@@ -100,7 +100,7 @@ while true do
         local connection
         connection = game:GetService("Players").LocalPlayer.PlayerGui.GameUI.REFERENCED__GameUIFrame.TopFlag.FlagImage:GetPropertyChangedSignal("Image"):Connect(autoAnswer)
         autoAnswer()
-        repeat wait() until not isInGame()
+        repeat task.wait() until not isInGame()
         connection:Disconnect()
     end
     task.wait(0.5)
