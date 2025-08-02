@@ -158,7 +158,7 @@ local function checkForRestart()
             local imageId = currentImage:match("rbxassetid://(%d+)") or currentImage
             
             -- Check if same flag is still displayed but not answered
-            if imageId == currentFlagId and inputBox.Text ~= countryMap[imageId] then
+            if imageId == currentFlagId and inputBox.Text ~= countryFlag[imageId] then
                 autoAnswer()
             end
         end
