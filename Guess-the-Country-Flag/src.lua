@@ -30,6 +30,9 @@ local function autoAnswer()
     if not isInGame() or isTyping then return end
     isTyping = true
     
+    -- Small delay to ensure flag updates
+    task.wait(0.01)
+    
     local playerGui = game.Players.LocalPlayer:FindFirstChild("PlayerGui")
     if not playerGui then isTyping = false return end
     
@@ -102,6 +105,7 @@ while true do
     if isInGame() then
         local connection
         connection = game:GetService("Players").LocalPlayer.PlayerGui.GameUI.REFERENCED__GameUIFrame.TopFlag.FlagImage:GetPropertyChangedSignal("Image"):Connect(autoAnswer)
+        task.wait(0.01) -- Small delay preventing answering the last round's flag
         autoAnswer()  -- Answer the current flag immediately
         repeat
             task.wait()
