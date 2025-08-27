@@ -59,42 +59,14 @@ local function autoAnswer()
     local country = countryFlag[imageId] or countryFlag["rbxassetid://"..imageId]
     
     if country and inputBox:IsDescendantOf(game) then
-        inputBox:CaptureFocus()  -- CaptureFocus should work, I hope so..
+        inputBox:Activate()  -- Use Activate() instead of CaptureFocus()
         
-        if instantSubmit then
-            -- Instant submission mode
-            inputBox.Text = country
-            task.wait(0.05)
-            game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.Return, false, game)
-            task.wait(0.01)
-            game:GetService("VirtualInputManager"):SendKeyEvent(false, Enum.KeyCode.Return, false, game)
-        else
-            -- Realistic typing mode
-            inputBox.Text = ""
-            local initialDelay = math.random(0.8, 2.5)
-            task.wait(initialDelay)
-            
-            for i = 1, #country do
-                if not isInGame() then break end
-                inputBox.Text = string.sub(country, 1, i)
-                
-                local charDelay = math.random(50, 180)/1000
-                if math.random(1, 20) == 1 then
-                    task.wait(charDelay)
-                    inputBox.Text = string.sub(country, 1, i-1) .. string.char(math.random(97, 122))
-                    task.wait(math.random(50, 150)/1000)
-                    inputBox.Text = string.sub(country, 1, i)
-                end
-                
-                task.wait(charDelay)
-            end
-            
-            local submitDelay = math.random(0.3, 1.2)
-            task.wait(submitDelay)
-            game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.Return, false, game)
-            task.wait(0.01)
-            game:GetService("VirtualInputManager"):SendKeyEvent(false, Enum.KeyCode.Return, false, game)
-        end
+        -- Instant submission only
+        inputBox.Text = country
+        task.wait(0.05)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.Return, false, game)
+        task.wait(0.01)
+        game:GetService("VirtualInputManager"):SendKeyEvent(false, Enum.KeyCode.Return, false, game)
     end
     
     isTyping = false
