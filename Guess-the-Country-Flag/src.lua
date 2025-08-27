@@ -59,7 +59,7 @@ local function autoAnswer()
     local country = countryFlag[imageId] or countryFlag["rbxassetid://"..imageId]
     
     if country and inputBox:IsDescendantOf(game) then
-        inputBox:Activate()  -- Use Activate() instead of CaptureFocus()
+        inputBox:CaptureFocus()
         
         -- Instant submission only
         inputBox.Text = country
