@@ -14,7 +14,6 @@
 1. **Requires a Roblox executor** (Known ones: Arceus X, Fluxus, Ronix, Delta, etc.)
 2. Copy this code into your executor:
 ```lua
-instantSubmit = false -- Set to true for instant answers
 loadstring(game:HttpGet("https://raw.githubusercontent.com/babyoutrhy/RLua/main/Guess-the-Country-Flag/src.lua", true))()
 ```
 
