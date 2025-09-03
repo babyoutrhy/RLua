@@ -17,9 +17,7 @@
 instantSubmit = false -- Set to true for instant answers
 loadstring(game:HttpGet("https://raw.githubusercontent.com/babyoutrhy/RLua/main/Guess-the-Country-Flag/src.lua", true))()
 ```
-3. **Configuration**:
-   - `instantSubmit = true`: Answers immediately (0.1s response)
-   - `instantSubmit = false`: Realistic typing with some fake typos (1.5-5s response)
+
 
 ## Country Database
 
