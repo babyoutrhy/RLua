@@ -1,1 +1,1 @@
-Changelogs: Summer update, if not, recommended not using.
+Changelogs: Halloween update, if not, recommended not using.
